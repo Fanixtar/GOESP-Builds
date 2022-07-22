@@ -34,13 +34,14 @@ jobs:
     - name: Removing unused files
       shell: bash
       run: |
-        rm -rf ./GOESP/bin/Release/obj
-        rm -rf ./GOESP/bin/Release/*.pdb
-        rm -rf ./GOESP/bin/Release/*.obj
+        ls GOESP
+        rm -rf ./GOESP/Release/obj
+        rm -rf ./GOESP/Release/*.pdb
+        rm -rf ./GOESP/Release/*.obj
       
     - name: Upload latest artifact
       uses: actions/upload-artifact@v3.1.0
       with:
         name: GOESP-release
-        path: ./GOESP/bin/Release/*
+        path: ./GOESP/Release/*
         if-no-files-found: error
