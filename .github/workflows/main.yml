@@ -34,7 +34,6 @@ jobs:
     - name: Removing unused files
       shell: bash
       run: |
-        ls GOESP
         rm -rf ./GOESP/Release/obj
         rm -rf ./GOESP/Release/*.pdb
         rm -rf ./GOESP/Release/*.obj
